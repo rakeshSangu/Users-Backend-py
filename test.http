@@ -1,0 +1,63 @@
+### 1. Get Home
+GET http://localhost:5009/
+Content-Type: application/json
+
+
+### 2. Create New User (POST)
+POST http://localhost:5009/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "SecurePass123"
+}
+
+
+### 3. Get All Users
+GET http://localhost:5009/users
+
+
+### 4. Get User by ID (Change 1 if needed)
+GET http://localhost:5009/user/2
+
+
+
+### 5. Update User by ID (PUT)
+PUT http://localhost:5009/user/7
+Content-Type: application/json
+
+{
+  "name": "Pawan kalyan",
+  "email": "pspk.updated@example.com"
+}
+
+
+### 6. Search User by Name
+GET http://localhost:5009/search?name=Pawan
+
+
+
+### 7. Login User (valid credentials)
+POST http://localhost:5009/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "SecurePass123"
+}
+
+
+### 8. Login User (wrong password)
+POST http://localhost:5009/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "WrongPassword"
+}
+
+
+### 9. Delete User by ID
+DELETE http://localhost:5009/user/1
+Content-Type: application/json
